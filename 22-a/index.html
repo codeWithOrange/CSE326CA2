@@ -1,0 +1,95 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fuel Efficiency Tracker</title>
+        <style>
+            #main-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+            }
+            .fuel-container {
+                width: 60%;
+                text-align: center;
+                padding: 10px;
+                box-shadow: 5px 2px 30px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+            #fuel-form > input[type="number"] {
+                width: 100%;
+                height: 30px;
+                border-radius: 5px;
+            }
+            input[type="submit"] {
+                width: 100%;
+                height: 25px;
+                border-radius: 5px;
+                color: white;
+                border-style: none;
+                background-color: seagreen;
+            }
+
+            #clear-btn {
+                color: white;
+                background-color: seagreen;
+                border-style: none;
+                padding: 8px;
+                border-radius: 5px;
+            }
+            input[type="submit"]:hover {
+                background-color: lightsalmon;
+                cursor: pointer;
+            }
+
+            #clear-btn:hover {
+                background-color: lightsalmon;
+                cursor: pointer;
+            }
+
+            @media (max-width: 800px) {
+                .fuel-container {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section id="main-container">
+            <div class="fuel-container">
+                <h1>Fuel Efficiency Tracker</h1>
+                <form id="fuel-form" action="">
+                    <input
+                        type="number"
+                        id="distance"
+                        name="distance"
+                        placeholder="Distance (miles or km)"
+                    />
+                    <br />
+                    <br />
+                    <input
+                        type="number"
+                        id="fuel-used"
+                        name="fuel-used"
+                        placeholder="Fuel Used (gallons or liters)"
+                    />
+                    <br />
+                    <br />
+                    <input type="radio" value="liters" name="fuel" />
+                    <label for="liters">Liters</label>
+                    <br />
+                    <input type="radio" value="Gallons" name="fuel" />
+                    <label for="Gallons">Gallons</label>
+                    <br />
+                    <br />
+                    <input type="submit" value="Calculate Efficiency" />
+                </form>
+                <div class="history">
+                    <h3>Trip History</h3>
+                    <p>1000-500 = 2.00/100km</p>
+                    <button id="clear-btn">clear history</button>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

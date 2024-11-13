@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Loan calculator</title>
+        <style>
+            #loan-form-main-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+            }
+            .loan-container {
+                width: 60%;
+                padding: 10px;
+                box-shadow: 5px 2px 30px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                height: fit-content;
+
+                text-align: center;
+            }
+            #loan-form > input[type="number"] {
+                width: 100%;
+                height: 30px;
+                border-radius: 5px;
+            }
+            input[type="submit"] {
+                width: 100%;
+                color: white;
+                height: 30px;
+                border-radius: 5px;
+                background-color: teal;
+                border-style: none;
+            }
+            input[type="submit"]:hover {
+                background-color: lightsalmon;
+                border-style: none;
+                cursor: pointer;
+            }
+            @media (max-width: 800px) {
+                .loan-container {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section id="loan-form-main-container">
+            <div class="loan-container">
+                <form id="loan-form" action="">
+                    <h1>Loan application</h1>
+                    <input
+                        type="number"
+                        id="loan-amount"
+                        name="loan-amount"
+                        placeholder="enter the loan amount"
+                    />
+                    <br />
+                    <br />
+                    <input
+                        type="number"
+                        name="income-amount"
+                        placeholder="enter the income amount"
+                        id="income-amount"
+                    />
+                    <br />
+                    <br />
+                    <input type="submit" value="Validate" />
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
